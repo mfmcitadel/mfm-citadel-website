@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<!--
+===================================================================
+  MFM CITADEL OF DELIVERANCE — CHURCH WEBSITE
+  HOW TO EDIT THIS WEBSITE (no coding needed)
+===================================================================
+
+  This whole website is this one file. To change something:
+
+  1. On GitHub, open this file (index.html) and click the PENCIL icon.
+  2. Press Ctrl+F (or Cmd+F on a Mac) to search for the words you
+     want to change — e.g. search "10:00 AM" to find a service time.
+  3. Type your new words in place of the old ones.
+     ONLY change words BETWEEN the > and < symbols.
+     Example:  <div class="when">10:00 AM</div>
+     You may change 10:00 AM  ->  but do NOT touch the < > parts.
+  4. Scroll down, click "Commit changes" (green button), then
+     "Commit changes" again. The live website updates in ~2 minutes.
+
+  Each section you might edit is marked with a label like:
+      <!-- EDIT: SERVICE TIMES ... -->
+  Search for the word "EDIT:" to jump between all editable areas.
+  Sections you can edit: home headline & service card, weekly
+  programmes, ministry-wide programmes (Manna Water / PMCH), the
+  About welcome & beliefs, service times & branch addresses, the
+  contact emails & phone numbers, the welcome/first-visit page,
+  and the privacy policy.
+
+  MADE A MISTAKE? Nothing is ever lost. Click the "History" (clock)
+  icon on this file in GitHub, open the version from before your
+  change, and copy the old text back. Or ask for help.
+
+  Things you should NOT change unless you know what you're doing:
+  everything inside <style>...</style> (that's the colours/layout)
+  and anything inside <script>...</script> (that's the menu).
+===================================================================
+-->
+<html lang="en">
+<head>
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFM Citadel of Deliverance, Manchester | Mountain of Fire and Miracles Ministries</title>
+<meta name="description" content="An official MFM branch in Manchester. Sunday service 10:00am in Cheetham Hill — prayer, deliverance and the Word. Everyone welcome.">
+<meta property="og:title" content="MFM Citadel of Deliverance, Manchester">
+<meta property="og:description" content="An official MFM branch in Manchester. Sunday service 10:00am in Cheetham Hill — prayer, deliverance and the Word. Everyone welcome.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#4E1C3E;        /* MFM royal purple — the circle */
+    --purple-mid:#B8558D;
+    --purple-soft:#F8ECF3;
+    --fire:#E8641F;          /* Holy Ghost fire accent */
+    --fire-deep:#C7480F;
+    --flame-grad:linear-gradient(135deg,#F7C43D 0%,#F08C1E 55%,#D9530F 100%);
+    --white:#FFFFFF;         /* holiness base */
+    --base:#FDFBFC;
+    --text:#33222C;
+    --muted:#75626C;
+    --line:#EEDEE8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Albert Sans',sans-serif;
+    color:var(--text);
+    background:var(--base);
+    line-height:1.6;
+    font-size:16.5px;
+  }
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;color:var(--purple);line-height:1.08}
+  a{color:var(--purple-mid)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .eyebrow{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--fire);margin-bottom:14px;
+  }
+  .btn{
+    display:inline-block;background:var(--purple);color:#fff;text-decoration:none;
+    padding:14px 26px;border-radius:999px;font-weight:600;font-size:15.5px;
+    border:2px solid var(--purple);transition:background .18s,color .18s;cursor:pointer;
+    font-family:'Albert Sans',sans-serif;
+  }
+  .btn:hover{background:transparent;color:var(--purple)}
+  .btn.fire{background:var(--fire);border-color:var(--fire);color:#fff}
+  .btn.fire:hover{background:transparent;color:var(--fire)}
+  .btn.ghost{background:transparent;color:var(--purple)}
+  .btn.ghost:hover{background:var(--purple);color:#fff}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--fire);outline-offset:3px}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(251,250,253,.93);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  }
+  .navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;max-width:1060px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .logo-mark{
+    width:44px;height:44px;border-radius:50%;flex-shrink:0;object-fit:cover;
+    background:#fff;
+  }
+  .logo-name{font-family:'Bricolage Grotesque';font-weight:800;font-size:16.5px;color:var(--purple);line-height:1.15}
+  .logo-name small{display:block;font-family:'Albert Sans';font-weight:600;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--fire)}
+  .nav-links{display:flex;gap:4px;align-items:center;list-style:none}
+  .nav-links button{
+    background:none;border:none;font-family:'Albert Sans';font-size:15px;font-weight:600;
+    color:var(--text);padding:9px 13px;border-radius:999px;cursor:pointer;transition:background .15s;
+  }
+  .nav-links button:hover{background:var(--purple-soft)}
+  .nav-links button.active{background:var(--purple);color:#fff}
+  .nav-links .visit-btn{background:var(--fire);color:#fff;font-weight:700}
+  .nav-links .visit-btn:hover{background:var(--fire-deep)}
+  .menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--purple)}
+
+  /* ---------- PAGES ---------- */
+  .page{display:none}
+  .page.active{display:block;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .page.active{animation:none}
+    html{scroll-behavior:auto}
+  }
+  section{padding:72px 0}
+  section.tight{padding:48px 0}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--purple);color:#fff;position:relative;overflow:hidden;
+    padding:88px 0 96px;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto -10% -55% -10%;height:75%;
+    background:radial-gradient(ellipse at center,rgba(232,100,31,.28),transparent 65%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero h1{color:#fff;font-size:clamp(40px,5.6vw,62px);font-weight:800;letter-spacing:-.01em}
+  .hero h1 .accent{
+    background:var(--flame-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lede{margin:22px 0 30px;font-size:19px;color:#DCD3E8;max-width:47ch}
+  .hero .eyebrow{color:#F5B82E}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* signature: the Sunday bulletin card */
+  .bulletin{
+    background:var(--white);border-radius:18px;color:var(--text);
+    box-shadow:0 24px 60px rgba(0,0,0,.4);
+    position:relative;transform:rotate(1.5deg);
+    border-top:5px solid transparent;
+    border-image:linear-gradient(90deg,#F7C43D,#F08C1E,#D9530F) 1;
+  }
+  .bulletin::before,.bulletin::after{
+    content:"";position:absolute;width:26px;height:26px;border-radius:50%;
+    background:var(--purple);top:50%;margin-top:-13px;
+  }
+  .bulletin::before{left:-13px}
+  .bulletin::after{right:-13px}
+  .bulletin-head{
+    padding:22px 28px 16px;border-bottom:2px dashed var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  .bulletin-head .label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fire)}
+  .bulletin-head .day{font-family:'Bricolage Grotesque';font-weight:800;font-size:19px;color:var(--purple)}
+  .bulletin-body{padding:20px 28px 26px}
+  .bulletin .time{font-family:'Bricolage Grotesque';font-weight:800;font-size:54px;color:var(--purple);line-height:1}
+  .bulletin .time small{font-size:22px;color:var(--fire);font-weight:600}
+  .bulletin ul{list-style:none;margin:16px 0 20px}
+  .bulletin li{padding:7px 0;border-bottom:1px solid var(--purple-soft);font-size:15px;display:flex;gap:10px}
+  .bulletin li:last-child{border:none}
+  .bulletin li b{min-width:86px;color:var(--purple)}
+  .bulletin .btn{width:100%;text-align:center}
+
+  /* ---------- SECTIONS ---------- */
+  .section-head{max-width:640px;margin-bottom:40px}
+  .section-head h2{font-size:clamp(30px,4vw,42px);font-weight:800}
+  .section-head p{margin-top:12px;color:var(--muted);font-size:17.5px}
+
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--white);border-radius:16px;padding:28px;border:1px solid var(--line);
+  }
+  .card .num{
+    font-family:'Bricolage Grotesque';font-weight:800;color:var(--fire);font-size:14px;
+    letter-spacing:.08em;margin-bottom:10px;display:block;text-transform:uppercase;
+  }
+  .card h3{font-size:20px;margin-bottom:8px}
+  .card p{font-size:15.5px;color:var(--muted)}
+  .yt-btn{margin-top:16px;font-size:14px;padding:10px 20px}
+
+  .strip{
+    background:var(--purple-mid);color:#fff;border-radius:20px;padding:44px 40px;
+    display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;
+    background-image:radial-gradient(circle at 90% 10%,rgba(232,100,31,.35),transparent 45%);
+  }
+  .strip h3{color:#fff;font-size:26px}
+  .strip p{color:#E4DAF0;margin-top:6px;max-width:52ch}
+
+  /* testimonies */
+  .quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .quote{
+    background:var(--white);border-radius:16px;padding:30px;border:1px solid var(--line);
+    position:relative;
+  }
+  .quote::before{
+    content:"\201C";font-family:'Bricolage Grotesque';font-weight:800;font-size:64px;
+    color:var(--fire);position:absolute;top:6px;left:22px;line-height:1;opacity:.85;
+  }
+  .quote p{margin-top:26px;font-size:16.5px}
+  .quote footer{margin-top:16px;font-weight:700;color:var(--purple);font-size:14.5px}
+  .quote footer span{display:block;font-weight:500;color:var(--muted);font-size:13px}
+  .quote.featured{grid-column:1/-1;background:var(--purple);border:none}
+  .quote.featured h3{color:#fff}
+  .quote.featured p{color:#E9E1F3;font-size:19px;max-width:62ch}
+  .quote.featured footer{color:#F5B82E}
+  .quote.featured footer span{color:#CFA6BF}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+  .beliefs{list-style:none;margin-top:8px}
+  .beliefs li{
+    padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;font-size:16px;
+  }
+  .beliefs li::before{content:"🔥";font-size:14px;margin-top:3px}
+  .go-card,.pastor-card{
+    background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  }
+  .pastor-card{background:var(--purple-soft);border-color:var(--purple)}
+  .pastor-photo{
+    height:210px;background:linear-gradient(140deg,var(--purple-mid) 0%,var(--purple) 100%);
+    display:flex;align-items:center;justify-content:center;color:#F5B82E;
+    font-family:'Bricolage Grotesque';font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  }
+  .pastor-card .pad,.go-card .pad{padding:24px 26px}
+  .pastor-card h3,.go-card h3{font-size:21px}
+  .role{color:var(--fire);font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 12px}
+  .pastor-card p,.go-card p{font-size:15px;color:var(--muted)}
+  .go-card{margin-top:22px}
+  .go-card-solo{margin-top:0;background:var(--purple-soft);border-color:var(--purple)}
+  .go-card-solo .pad{padding:38px 36px}
+  .go-card-solo h3{font-size:30px;margin:4px 0 2px}
+  .go-card-solo p{font-size:16.5px;line-height:1.7;margin-top:12px}
+
+  /* times & location */
+  .times-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .time-card{background:var(--white);border-radius:16px;padding:26px;border:1px solid var(--line)}
+  .time-card.vigil{background:var(--purple);border:none}
+  .time-card.vigil .when,.time-card.vigil h3{color:#fff}
+  .time-card.vigil p{color:#CDBEE0}
+  .time-card .when{font-family:'Bricolage Grotesque';font-weight:800;font-size:28px;color:var(--purple)}
+  .time-card .day-label{color:var(--fire);font-weight:700;font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+  .time-card p{color:var(--muted);font-size:15px;margin-top:8px}
+  .branch-block{
+    margin-top:26px;background:var(--white);border:1px solid var(--line);border-radius:18px;
+    display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
+  }
+  .map-ph{
+    min-height:280px;background:
+      linear-gradient(rgba(184,85,141,.08) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(184,85,141,.08) 1px,transparent 1px);
+    background-size:28px 28px;background-color:var(--purple-soft);
+    display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .map-pin{
+    width:46px;height:46px;border-radius:50% 50% 50% 0;background:var(--fire);
+    transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(232,100,31,.45);
+  }
+  .map-pin::after{content:"";width:16px;height:16px;border-radius:50%;background:var(--purple)}
+  .map-note{position:absolute;bottom:14px;font-size:12px;color:var(--muted)}
+  .map-info{padding:32px}
+  .map-info .branch-tag{
+    display:inline-block;background:var(--purple-soft);color:var(--purple);font-weight:700;
+    font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;
+    padding:5px 13px;margin-bottom:12px;
+  }
+  .map-info .branch-tag.fire{background:#FBE9E2;color:var(--fire-deep)}
+  .map-info h3{font-size:22px;margin-bottom:12px}
+  .map-info p{font-size:15.5px;color:var(--muted);margin-bottom:14px}
+  .map-info b{color:var(--purple)}
+
+  /* welcome / first visit */
+  .welcome-hero{
+    background:var(--flame-grad);border-radius:22px;padding:52px 46px;color:#fff;
+  }
+  .welcome-hero .eyebrow{color:#FFE3B8}
+  .welcome-hero h2{font-size:clamp(30px,4.5vw,44px);font-weight:800;color:#fff}
+  .welcome-hero p{margin-top:12px;max-width:56ch;font-size:17.5px;color:#FFEFE3}
+  .expect{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  form{
+    background:var(--white);border-radius:18px;padding:36px;border:1px solid var(--line);
+    max-width:560px;margin-top:44px;
+  }
+  form h3{font-size:22px;margin-bottom:6px}
+  form .hint{font-size:14px;color:var(--muted);margin-bottom:22px}
+  label{display:block;font-weight:600;font-size:14px;margin:16px 0 6px;color:var(--purple)}
+  input,select,textarea{
+    width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;
+    font-family:'Albert Sans';font-size:15px;background:var(--base);
+  }
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--fire);border-color:var(--fire)}
+  form .btn{margin-top:22px;width:100%}
+  .privacy-note{font-size:12.5px;color:var(--muted);margin-top:14px}
+
+  /* contact + privacy */
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .prose{max-width:680px}
+  .prose h3{margin:28px 0 8px;font-size:19px}
+  .prose p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+
+  /* footer */
+  footer.site{
+    background:var(--purple);color:#DDBCD0;padding:54px 0 34px;margin-top:40px;
+  }
+  .foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+  footer.site .logo-name{color:#fff}
+  footer.site .logo-mark{background:#fff}
+  footer.site h4{color:#F5B82E;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  footer.site ul{list-style:none}
+  footer.site li{margin:7px 0}
+  footer.site a,footer.site button{
+    color:#DDBCD0;text-decoration:none;background:none;border:none;cursor:pointer;
+    font-family:'Albert Sans';font-size:15px;padding:0;
+  }
+  footer.site a:hover,footer.site button:hover{color:#fff}
+  .socials{display:flex;gap:10px;margin-top:14px}
+  .socials a{
+    width:38px;height:38px;border-radius:50%;border:1.5px solid #7D466A;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+  }
+  .socials a:hover{border-color:var(--fire);color:#F5B82E}
+  .fineprint{border-top:1px solid #6E3C5C;margin-top:38px;padding-top:20px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* pastor welcome */
+  .welcome-msg{
+    background:var(--white);border-radius:18px;border:1px solid var(--line);
+    padding:38px 40px;margin-bottom:40px;position:relative;
+    border-left:5px solid var(--fire);
+  }
+  .welcome-msg h3{font-size:24px;margin-bottom:6px}
+  .welcome-msg .lead-para{font-size:17.5px;color:var(--text);font-weight:500}
+  .welcome-msg p{margin-bottom:14px;color:var(--muted);font-size:16px}
+  .welcome-msg p:last-of-type{margin-bottom:0}
+  .welcome-msg .closing{color:var(--purple);font-weight:600;font-style:italic}
+  .welcome-msg .signoff{
+    margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+    font-weight:700;color:var(--purple);font-size:15px;
+  }
+  .welcome-msg .signoff span{display:block;font-weight:500;color:var(--fire);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+
+  /* phone lists */
+  .phone-block{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+  .phone-col{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .phone-col ul{list-style:none;margin-top:6px}
+  .phone-col li{padding:8px 0;border-bottom:1px solid var(--purple-soft);font-size:17px;font-weight:600}
+  .phone-col li:last-child{border:none}
+  .phone-col a{color:var(--purple);text-decoration:none}
+  .phone-col a:hover{color:var(--fire)}
+
+  .credit{text-align:center;margin-top:16px;font-size:12px;color:#9E7E92;letter-spacing:.02em}  .credit a{color:#B99EAF;text-decoration:none}
+  .credit a:hover{color:#fff}
+
+  /* responsive */
+  @media (max-width:860px){
+    .hero-grid,.about-grid,.branch-block{grid-template-columns:1fr}
+    .card-grid,.expect,.contact-grid,.times-grid,.phone-block{grid-template-columns:1fr}
+    .quote-grid{grid-template-columns:1fr}
+    .bulletin{transform:none;margin-top:8px}
+    .nav-links{
+      display:none;position:absolute;top:100%;left:0;right:0;background:var(--base);
+      flex-direction:column;align-items:stretch;padding:12px 18px 18px;border-bottom:1px solid var(--line);
+      gap:6px;box-shadow:0 18px 30px rgba(78,28,62,.14);
+    }
+    .nav-links.open{display:flex}
+    .nav-links button{text-align:left;padding:12px 14px}
+    .menu-toggle{display:block}
+    section{padding:52px 0}
+    .hero{padding:60px 0 68px}
+    .strip{padding:34px 26px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navbar">
+    <a class="logo" href="#" onclick="go('home');return false;">
+      <img class="logo-mark" src="data:image/jpeg;base64,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" alt="MFM Citadel of Deliverance logo">
+      <span class="logo-name">MFM Citadel of Deliverance<small>Manchester Branch</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><button data-page="home" class="active" onclick="go('home')">Home</button></li>
+      <li><button data-page="about" onclick="go('about')">About</button></li>
+      <li><button data-page="times" onclick="go('times')">Times &amp; Branches</button></li>
+      <li><button data-page="contact" onclick="go('contact')">Contact</button></li>
+      <li><button data-page="welcome" class="visit-btn" onclick="go('welcome')">Plan your first visit</button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HOME PAGE ================= -->
+<!-- EDIT: HOME PAGE — welcome headline and Sunday service card -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Mountain of Fire and Miracles Ministries · Manchester</span>
+        <h1>Come as you are. <span class="accent">Leave carrying fire.</span></h1>
+        <p class="lede">MFM Citadel of Deliverance, Manchester — an official branch of Mountain of Fire and Miracles Ministries, gathering in Cheetham Hill every Sunday at 10:00am for worship, the Word, and prayer that means business.</p>
+        <div class="hero-ctas">
+          <button class="btn fire" onclick="go('welcome')">Join us this Sunday</button>
+          <button class="btn ghost" style="border-color:#fff;color:#fff" onclick="go('welcome')">I'm new here</button>
+        </div>
+      </div>
+      <div class="bulletin" role="group" aria-label="This Sunday's service">
+        <div class="bulletin-head">
+          <span class="label">This Sunday</span>
+          <span class="day">Sunday Service</span>
+        </div>
+        <div class="bulletin-body">
+          <div class="time">10:00 <small>AM – 1:00 PM</small></div>
+          <ul>
+            <li><b>Where</b> ITC Education Centre, 122 Waterloo Road, Cheetham Hill, Manchester M8 8AF</li>
+            <li><b>Kids</b> Children's church runs during the service</li>
+          </ul>
+          <button class="btn" onclick="go('welcome')">Plan your first visit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Life at the MFM Citadel of Deliverance</span>
+        <h2>A praying people. A delivered people.</h2>
+      </div>
+      <div class="prose" style="max-width:760px;margin-bottom:40px">
+        <p style="margin-bottom:14px">We are MFM Citadel of Deliverance, Manchester — a branch of Mountain of Fire and Miracles Ministries, the worldwide fellowship founded by Dr. D.K. Olukoya. If you've been looking for a Pentecostal church in Manchester where prayer is taken seriously and the Word is preached without apology, you've found the door.</p>
+        <p style="margin-bottom:14px">MFM is known for four things, and we hold all four here in MFM Citadel of Deliverance: <b>aggressive prayer, deliverance, holiness within and without, and the unedited Word of God.</b> That's not a slogan on a wall. It's what happens in this room on a Sunday morning and at 11:00pm on a Tuesday night.</p>
+        <p>If some of that language is new to you, don't worry. Nobody here will expect you to keep up. Sit at the back, watch how we pray, and take as long as you need.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="num">Sundays · 10:00am</span>
+          <h3>Worship &amp; the Word</h3>
+          <p>Spirit-filled worship, fervent prayer, and teaching from the Bible that's built to survive your Monday morning. Children's church runs alongside.</p>
+        </div>
+        <div class="card">
+          <span class="num">Mondays · 11:00pm</span>
+          <h3>Ministers' Prayer Meeting</h3>
+          <p>Our workers and ministers gather online to pray for the church, the city, and every name on our list. Held virtually, 11:00pm–12:00am.</p>
+        </div>
+        <div class="card">
+          <span class="num">Tuesdays · 6:00pm</span>
+          <h3>Bible Study</h3>
+          <p>Dig deeper into the scriptures together every Tuesday evening, 6:00–7:00pm. Bring your Bible and your questions.</p>
+        </div>
+        <div class="card">
+          <span class="num">Tuesdays · 11:00pm</span>
+          <h3>Prayer Vigil</h3>
+          <p>When the city sleeps, we pray. Two hours of night prayer for breakthrough, deliverance, and the strengthening of the saints. 11:00pm–1:00am.</p>
+        </div>
+      </div>
+
+      <!-- EDIT: MINISTRY-WIDE PROGRAMMES — Manna Water & PMCH (headquarters) -->
+      <div class="section-head" style="margin-top:56px">
+        <span class="eyebrow">Across the ministry</span>
+        <h2>Join the wider MFM family</h2>
+        <p>Alongside our Manchester gatherings, we join these ministry-wide programmes from MFM headquarters.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="num">Wednesdays · 4:00pm</span>
+          <h3>Manna Water</h3>
+          <p>The ministry's midweek power service, streamed from headquarters. Join us every Wednesday from 4:00pm on YouTube.</p>
+          <a class="btn fire yt-btn" href="https://www.youtube.com/mfmministries" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
+        <div class="card">
+          <span class="num">1st Saturday · 7:00am</span>
+          <h3>Power Must Change Hands (PMCH)</h3>
+          <p>MFM's flagship monthly deliverance and breakthrough programme, held on the first Saturday of every month from 7:00am.</p>
+          <a class="btn fire yt-btn" href="https://www.youtube.com/mfmministries" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we're known for</span>
+        <h2>Fire in our faith. Warmth in our welcome.</h2>
+        <p>Four things shape everything we do at MFM Citadel of Deliverance, Manchester.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="num">Pillar One</span>
+          <h3>Aggressive prayer</h3>
+          <p>We pray like it matters, because it does. Loud, specific, scriptural, and persistent. You'll hear a room full of people calling on God at the same time — one of the first things visitors notice, and one of the first things they miss when they're away.</p>
+        </div>
+        <div class="card">
+          <span class="num">Pillar Two</span>
+          <h3>Deliverance</h3>
+          <p>We believe there is no chain the name of Jesus cannot break. Deliverance ministry sits at the heart of MFM worldwide, and at the heart of this branch — handled with scripture, with prayer, and with care for the person in front of us.</p>
+        </div>
+        <div class="card">
+          <span class="num">Pillar Three</span>
+          <h3>Holiness within and without</h3>
+          <p>We take seriously the call to live clean before God — in private and in public. Not as a performance, and not as a burden, but as the ordinary shape of a life that has been set free.</p>
+        </div>
+        <div class="card">
+          <span class="num">Pillar Four</span>
+          <h3>The Word of God</h3>
+          <p>The Bible is our foundation. Every sermon, every prayer point, every counselling conversation goes back to it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="strip">
+        <div>
+          <h3>Carrying something heavy?</h3>
+          <p>You don't have to wait until Sunday. Call our prayer and counselling line or send us a prayer request, and a member of our prayer team will stand with you — in confidence, with no judgement, and no pressure to explain more than you want to. We won't promise you an outcome. We will promise you this: someone will pray with you.</p>
+        </div>
+        <button class="btn fire" onclick="go('contact')">Request prayer</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="strip" style="background:var(--purple)">
+        <div>
+          <h3>New here? We've saved you a seat.</h3>
+          <p>Tell us you're coming and someone from our welcome team will be watching for you at the door. No forms on the day, no standing up in front of everyone, no being singled out — just a friendly face who knows your name before you walk in.</p>
+        </div>
+        <button class="btn fire" onclick="go('welcome')">Plan your visit</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT PAGE ================= -->
+<!-- EDIT: ABOUT PAGE — Pastor's welcome message and beliefs -->
+<div class="page" id="page-about">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">About us</span>
+        <h2>Who we are and what we believe</h2>
+        <p>MFM Citadel of Deliverance is the Manchester branch of Mountain of Fire and Miracles Ministries — a full gospel ministry devoted to the revival of apostolic signs, Holy Ghost fire, deliverance, and the demonstration of the power of God.</p>
+      </div>
+
+      <div class="welcome-msg">
+        <h3>A word of welcome</h3>
+        <p class="lead-para">Welcome to Mountain of Fire – Citadel of Deliverance, a Christ-centred ministry dedicated to the advancement of the Gospel of Jesus Christ and the liberation, restoration, and transformation of lives through the power of God.</p>
+        <p>We are a family of believers committed to seeking God through prayer, worship, the teaching of the Word, and the demonstration of the power of the Holy Spirit. Our mission is to raise people who are spiritually strong, victorious, and fully established in Christ.</p>
+        <p>At Mountain of Fire – Citadel of Deliverance, we believe that no situation is beyond the power of God. Through faith in Jesus Christ, prayer, and the truth of God's Word, lives can be changed, destinies can be restored, and every form of spiritual bondage can be broken.</p>
+        <p>Whether you are searching for God, seeking spiritual growth, or in need of prayer and encouragement, you are warmly welcome to join us. There is a place for you here, and we believe God has a purpose for your life.</p>
+        <p class="closing">Welcome to Mountain of Fire – Citadel of Deliverance – a place of prayer, faith, deliverance, restoration, and divine transformation.</p>
+        <div class="signoff">Pastor Ayorinde<span>Branch Pastor</span></div>
+      </div>
+      <div class="about-grid">
+        <div>
+          <h3 style="font-size:22px;margin-bottom:6px">Our Statement of Belief</h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:6px">We hold to the Statement of Belief of Mountain of Fire and Miracles Ministries worldwide:</p>
+          <ul class="beliefs">
+            <li>The Scriptures — the inspired Word of God and the sole foundation of our faith and fellowship.</li>
+            <li>One true God, eternally existing in three Persons: the Father, the Son, and the Holy Spirit.</li>
+            <li>Mankind's fall, and redemption made possible only through the blood of Jesus Christ.</li>
+            <li>Salvation through the redeeming work of Christ and the regenerating work of the Holy Spirit — with sanctification as separation from all that is evil.</li>
+            <li>The baptism of the Holy Spirit.</li>
+            <li>Restitution for past wrongs, wherever possible.</li>
+            <li>The ordinances of the Church: the Lord's Supper and water baptism.</li>
+            <li>The Church universal — both visible and invisible.</li>
+            <li>A ministry divinely called and scripturally ordained.</li>
+            <li>The second coming of our Lord Jesus Christ, ushering believers into the Marriage Supper of the Lamb.</li>
+            <li>The millennial reign of Christ.</li>
+            <li>The final judgement.</li>
+            <li>The new Heaven and the new Earth.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="go-card go-card-solo">
+            <div class="pad">
+              <div class="role">Our General Overseer</div>
+              <h3>Dr. D.K. Olukoya</h3>
+              <div class="role">General Overseer, MFM Worldwide</div>
+              <p>Mountain of Fire and Miracles Ministries was founded by Dr. Daniel Kolawole Olukoya and has grown into a worldwide ministry with branches across the globe, united in prayer, deliverance, and the gospel of Jesus Christ. MFM Citadel of Deliverance, Manchester is an official branch of that ministry, submitted to its doctrine, leadership, and vision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= TIMES & BRANCHES PAGE ================= -->
+<!-- EDIT: SERVICE TIMES and BRANCH ADDRESSES (Manchester + Middlesbrough) -->
+<div class="page" id="page-times">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Times &amp; branches</span>
+        <h2>When we gather, and how to find us</h2>
+        <p>Everything below is open to everyone. You don't need to be a member, you don't need an invitation, and you don't need to let us know you're coming — though we'd love it if you did.</p>
+      </div>
+      <h3 style="font-size:22px;margin-bottom:18px">Manchester — Cheetham Hill</h3>
+      <div class="times-grid">
+        <div class="time-card">
+          <div class="day-label">Sunday</div>
+          <div class="when">10:00 AM – 1:00 PM</div>
+          <p>Worship, the Word, prayer, and children's church running alongside. This is the one to come to if you're visiting for the first time.</p>
+        </div>
+        <div class="time-card">
+          <div class="day-label">Monday</div>
+          <div class="when">11:00 PM – 12:00 AM</div>
+          <p>Ministers' Prayer Meeting, held virtually. Our workers and ministers pray for the church, the city, and the requests brought to us that week.</p>
+        </div>
+        <div class="time-card">
+          <div class="day-label">Tuesday</div>
+          <div class="when">6:00 – 7:00 PM</div>
+          <h3 style="font-size:17px;margin-top:6px">Bible Study</h3>
+          <p>Dig deeper into the scriptures together every Tuesday evening. Bring your Bible and your questions.</p>
+        </div>
+        <div class="time-card vigil">
+          <div class="day-label">Tuesday</div>
+          <div class="when">11:00 PM – 1:00 AM</div>
+          <h3 style="font-size:17px;margin-top:6px">Prayer Vigil</h3>
+          <p>Night prayer for breakthrough, deliverance and victory. If you've never prayed through the night before, this is a good place to start.</p>
+        </div>
+      </div>
+
+      <div class="branch-block">
+        <div class="map-ph" role="img" aria-label="Map placeholder showing Manchester branch location">
+          <div class="map-pin"></div>
+          <span class="map-note">Live Google Map embeds here</span>
+        </div>
+        <div class="map-info">
+          <span class="branch-tag fire">Manchester Branch · This site</span>
+          <h3>Find us in Cheetham Hill</h3>
+          <p><b>MFM Citadel of Deliverance</b><br>ITC Education Centre<br>122 Waterloo Road, Cheetham Hill<br>Manchester M8 8AF</p>
+          <p><b>For directions:</b> <a href="tel:+447831790232">07831 790232</a></p>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=ITC+Education+Centre+122+Waterloo+Road+Cheetham+Hill+Manchester+M8+8AF" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+
+      <div class="branch-block">
+        <div class="map-info">
+          <span class="branch-tag">Our sister branch · Middlesbrough</span>
+          <h3>MFM Citadel of Deliverance, Middlesbrough</h3>
+          <p><b>MFM St. Alphonsus Church</b><br>95 Westbourne Grove, North Ormesby<br>Middlesbrough TS3 6EW</p>
+          <p><b>Sundays:</b> 10:30 AM – 2:00 PM<br><b>Mondays:</b> Ministers' Prayer Meeting, 11:00 PM – 12:00 AM<br><b>Tuesdays:</b> Prayer Vigil, 11:00 PM – 1:00 AM<br><b>Telephone:</b> <a href="tel:+447383738183">07383 738183</a></p>
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=MFM+St+Alphonsus+Church+95+Westbourne+Grove+North+Ormesby+Middlesbrough+TS3+6EW" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <div class="map-ph" role="img" aria-label="Map placeholder showing Middlesbrough branch location">
+          <div class="map-pin"></div>
+          <span class="map-note">Live Google Map embeds here</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT PAGE ================= -->
+<!-- EDIT: CONTACT — email addresses and phone numbers -->
+<div class="page" id="page-contact">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>We'd love to hear from you</h2>
+        <p>Questions, prayer requests, or just saying hello — every message here reaches a real person, not an inbox nobody checks.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="card">
+          <span class="num">Contact &amp; prayer email</span>
+          <h3>info@mfmcitadel.org.uk</h3>
+          <p>Questions, visiting, volunteering, or a prayer request — send it here and our team will stand with you, in confidence. We reply within a couple of days.</p>
+        </div>
+        <div class="card">
+          <span class="num">Prayer &amp; counselling line</span>
+          <h3><a href="tel:+447383738183" style="text-decoration:none">07383 738183</a></h3>
+          <p>Call or message on WhatsApp. This is the line to ring if you need prayer or someone to talk to — someone will pray with you.</p>
+        </div>
+      </div>
+
+      <div class="phone-block">
+        <div class="phone-col">
+          <span class="num">Call the Manchester team</span>
+          <ul>
+            <li><a href="tel:+447383738183">07383 738183</a> — prayer &amp; counselling line</li>
+            <li><a href="tel:+447490444812">07490 444812</a></li>
+            <li><a href="tel:+447949536430">07949 536430</a></li>
+            <li><a href="tel:+447904810876">07904 810876</a></li>
+            <li><a href="tel:+447476277742">07476 277742</a></li>
+          </ul>
+        </div>
+        <div class="phone-col">
+          <span class="num">Call the Middlesbrough team</span>
+          <ul>
+            <li><a href="tel:+447383738183">07383 738183</a> — prayer &amp; counselling line</li>
+            <li><a href="tel:+447466477139">07466 477139</a></li>
+            <li><a href="tel:+447460959509">07460 959509</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= WELCOME PAGE ================= -->
+<!-- EDIT: WELCOME / FIRST VISIT page (the QR code points here) -->
+<div class="page" id="page-welcome">
+  <section>
+    <div class="wrap">
+      <div class="welcome-hero">
+        <span class="eyebrow">First time? Start here</span>
+        <h2>Your first Sunday, sorted.</h2>
+        <p>Walking into a church you've never been to before is a big thing — bigger than most churches remember. So here's exactly what happens, before you have to decide anything.</p>
+      </div>
+
+      <div class="expect">
+        <div class="card">
+          <span class="num">The service</span>
+          <h3>Worship, the Word &amp; prayer</h3>
+          <p>About three hours: vibrant praise, a season of prayer, and teaching straight from the Bible. Some of the prayer is loud and everyone prays at once — that's normal here, and nobody will mind if you'd rather listen.</p>
+        </div>
+        <div class="card">
+          <span class="num">Your children</span>
+          <h3>Safe, structured, looked after</h3>
+          <p>Children's church runs during the main service with our DBS-checked children's team. You'll sign your child in on arrival and sign them out yourself at the end — nobody else can collect them. Come and see the room first if you'd like to.</p>
+        </div>
+        <div class="card">
+          <span class="num">The pressure</span>
+          <h3>There isn't any</h3>
+          <p>You won't be asked to stand up, introduce yourself, give money, or come to the front. Sit at the back, keep your coat on, leave early if you need to. You set the pace.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="max-width:720px;margin-top:44px">
+        <h3 style="font-size:24px;margin-bottom:10px">The practical bits</h3>
+        <p style="margin-bottom:10px"><b>What do I wear?</b> Whatever you own. You'll see suits and you'll see trainers.</p>
+        <p style="margin-bottom:10px"><b>What time should I arrive?</b> Anywhere from 9:45am. Doors are open before the service starts.</p>
+        <p style="margin-bottom:10px"><b>Will I have to give money?</b> No. There's an offering during the service and you are free to let it pass you by.</p>
+        <p style="margin-bottom:10px"><b>Do I need to be a Christian?</b> No. Come as you are — searching, doubting, or somewhere in between.</p>
+        <p><b>How long is it?</b> 10:00am to around 1:00pm.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault();this.innerHTML='<h3>Thank you 🙏</h3><p class=hint>We\'ve got your message. Someone from the welcome team will be in touch — and we\'ll be watching for you on Sunday at 10:00am.</p>'">
+        <h3>Let us know you're coming</h3>
+        <p class="hint">Takes 30 seconds. We'll only use this to welcome you.</p>
+        <label for="fname">Your name</label>
+        <input id="fname" type="text" placeholder="First name is fine" required>
+        <label for="fcontact">Email or phone</label>
+        <input id="fcontact" type="text" placeholder="However you'd like us to reach you" required>
+        <label for="freason">I'd like…</label>
+        <select id="freason">
+          <option>Someone to look out for me on Sunday</option>
+          <option>Someone to contact me before I visit</option>
+          <option>Prayer for something on my heart</option>
+          <option>Just saying hello for now</option>
+        </select>
+        <label for="fmsg">Anything you'd like us to know? (optional)</label>
+        <textarea id="fmsg" rows="3" placeholder="Kids' ages, accessibility needs, a prayer request…"></textarea>
+        <button class="btn fire" type="submit">Send — see you Sunday</button>
+        <p class="privacy-note">We only use your details to welcome you and respond to your message. See our <a href="#" onclick="go('privacy');return false;">privacy policy</a>.</p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PRIVACY PAGE ================= -->
+<!-- EDIT: PRIVACY POLICY text -->
+<div class="page" id="page-privacy">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Privacy policy</span>
+        <h2>Your information, handled with care</h2>
+      </div>
+      <div class="prose">
+        <p><em>Last updated: [date]. Draft for review by church leadership before launch.</em></p>
+        <h3>Who we are</h3>
+        <p>MFM Citadel of Deliverance (Manchester Branch), a branch of Mountain of Fire and Miracles Ministries. Contact: <b>info@mfmcitadel.org.uk</b>, ITC Education Centre, 122 Waterloo Road, Cheetham Hill, Manchester M8 8AF.</p>
+        <h3>What we collect and why</h3>
+        <p><b>Welcome &amp; contact forms:</b> your name, contact details, and anything you choose to tell us — used only to welcome you, respond to your message, and arrange the support you asked for.</p>
+        <p><b>Prayer requests:</b> handled in confidence by our prayer team. Because a prayer request may reveal your religious beliefs or other sensitive matters, we treat this information with extra care and only use it for the purpose of praying with and supporting you.</p>
+        <p><b>Newsletter or updates (if you opt in):</b> your name and email, used only to send church updates. You can unsubscribe at any time and we will never pre-tick a consent box.</p>
+        <h3>Our lawful basis</h3>
+        <p>We process your information based on your consent, and — as a religious organisation — for our legitimate church activities in relation to members and people in regular contact with us, in line with UK GDPR and the Data Protection Act 2018.</p>
+        <h3>Who we share it with</h3>
+        <p>Nobody, for marketing — ever. Your details are seen only by the church team who need them (e.g. the welcome team or prayer team). Our website and forms are operated using trusted service providers who store data securely on our behalf.</p>
+        <h3>How long we keep it</h3>
+        <p>Only as long as needed for the purpose you shared it — for example, welcome form details are deleted once no longer needed. You can ask us to update or delete your information at any time.</p>
+        <h3>Your rights</h3>
+        <p>Under UK GDPR you may request a copy of your data, correct it, restrict its use, or ask us to erase it. Email <b>info@mfmcitadel.org.uk</b> and we will respond promptly. If you are unhappy with how we handle your data, you also have the right to complain to the Information Commissioner's Office (ico.org.uk).</p>
+        <h3>Children</h3>
+        <p>Our website is not aimed at children, and we do not knowingly collect children's details online. Information about children attending children's church is collected in person from parents or guardians under our safeguarding procedures.</p>
+        <h3>Photos</h3>
+        <p>Any photographs featuring identifiable individuals are only published with their written consent, and consent can be withdrawn at any time by contacting us.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#" onclick="go('home');return false;">
+          <img class="logo-mark" src="data:image/jpeg;base64,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" alt="MFM Citadel of Deliverance logo">
+          <span class="logo-name" style="color:#fff">MFM Citadel of Deliverance<small>Manchester Branch</small></span>
+        </a>
+      </div>
+      <div>
+        <h4>Manchester</h4>
+        <ul>
+          <li>Sundays 10:00 AM–1:00 PM</li>
+          <li>Mondays 11:00 PM–12:00 AM (Ministers' Prayer, virtual)</li>
+          <li>Tuesdays 11:00 PM–1:00 AM (Vigil)</li>
+          <li>ITC Education Centre, 122 Waterloo Road, Cheetham Hill, M8 8AF</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Middlesbrough</h4>
+        <ul>
+          <li>MFM St. Alphonsus Church</li>
+          <li>95 Westbourne Grove, North Ormesby</li>
+          <li>Middlesbrough TS3 6EW</li>
+          <li>Sundays 10:30 AM–2:00 PM</li>
+          <li>Mon Ministers' Prayer 11 PM–12 AM · Tue Vigil 11 PM–1 AM</li>
+          <li>Tel: 07383 738183</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><button onclick="go('about')">About</button></li>
+          <li><button onclick="go('times')">Times &amp; Branches</button></li>
+          <li><button onclick="go('welcome')">Plan your first visit</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>info@mfmcitadel.org.uk</li>
+          <li><a href="tel:+447383738183" style="color:inherit;text-decoration:none">07383 738183</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fineprint">
+      <span>© 2026 MFM Citadel of Deliverance. A branch of Mountain of Fire and Miracles Ministries.</span>
+      <button onclick="go('privacy')">Privacy policy</button>
+    </div>
+    <!-- EDIT: DESIGNER CREDIT (footer) -->
+    <div class="credit">Website by GenixHR · <a href="mailto:info@genixhr.com">info@genixhr.com</a></div>
+  </div>
+</footer>
+
+<script>
+function go(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelectorAll('.nav-links button[data-page]').forEach(b=>{
+    b.classList.toggle('active', b.dataset.page===page);
+  });
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo({top:0,behavior:'auto'});
+}
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+</body>
+</html>
